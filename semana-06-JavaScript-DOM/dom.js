@@ -1,21 +1,24 @@
 // EXAMINE THE DOCUMENT OBJECT //
+// con esto podemos ver el los objetos y las propiedades del documento
 
-// // console.dir(document);
+// console.dir(document);
 // console.log(document.domain);
 // console.log(document.URL);
 // console.log(document.title);
-// // document.title = 123;
+// document.title = 123;
 // console.log(document.doctype);
 // console.log(document.head);
 // console.log(document.body);
 // console.log(document.all);
 // console.log(document.all[10]);
-// // document.all[10].textContent = 'Hello';
+// document.all[10].textContent = 'Hello';
 // console.log(document.forms);
 // console.log(document.links);
 // console.log(document.images);
 
 // GETELEMENTBYID //
+// para obtener un elemento por su id
+
 // console.log(document.getElementById('header-title'));
 // var headerTitle = document.getElementById('header-title');
 // var header = document.getElementById('main-header');
@@ -27,6 +30,8 @@
 // header.style.borderBottom = 'solid 3px #000';
 
 // GETELEMENTSBYCLASSNAME //
+// para obtener elementos por sus clases
+
 // var items = document.getElementsByClassName('list-group-item');
 // console.log(items);
 // console.log(items[1]);
@@ -39,6 +44,8 @@
 // }
 
 // GETELEMENTSBYTAGNAME //
+// para obtener elementos por sus etiquetas
+
 // var li = document.getElementsByTagName('li');
 // console.log(li);
 // console.log(li[1]);
@@ -51,6 +58,8 @@
 // }
 
 // QUERYSELECTOR //
+// solo afecta al primer elemento que encuentre
+
 // var header = document.querySelector('#main-header');
 // header.style.borderBottom = 'solid 4px #ccc';
 
@@ -70,6 +79,8 @@
 // secondItem.style.color = 'coral';
 
 // QUERYSELECTORALL //
+// afecta a todos los elementos que encuentre
+
 // var titles = document.querySelectorAll('.title');
 
 // console.log(titles);
@@ -86,6 +97,8 @@
 
 
 // TRAVERSING THE DOM //
+// para recorrer el DOM
+
 // var itemList = document.querySelector('#items');
 // parentNode
 // console.log(itemList.parentNode);
@@ -99,29 +112,35 @@
 
 // childNodes
 // console.log(itemList.childNodes);
+
+// children
 // console.log(itemList.children);
 // console.log(itemList.children[1]);
 // itemList.children[1].style.backgroundColor = 'yellow';
 
 // firstChild
 // console.log(itemList.firstChild);
+
 // firstElementChild
 // console.log(itemList.firstElementChild);
 // itemList.firstElementChild.textContent = 'Hello 1';
 
 // lastChild
 // console.log(itemList.lastChild);
+
 // lastElementChild
 // console.log(itemList.lastElementChild);
 // itemList.lastElementChild.textContent = 'Hello 4';
 
 // nextSibling
 // console.log(itemList.nextSibling);
+
 // nextElementSibling
 // console.log(itemList.nextElementSibling);
 
 // previousSibling
 // console.log(itemList.previousSibling);
+
 // previousElementSibling
 // console.log(itemList.previousElementSibling);
 // itemList.previousElementSibling.style.color = 'green';
@@ -149,6 +168,9 @@
 // newDiv.style.fontSize = '30px';
 
 // container.insertBefore(newDiv, h1);
+
+
+
 
 // EVENTS //
 // var button = document.getElementById('button').addEventListener('click', buttonClick);
@@ -193,14 +215,39 @@ var box = document.getElementById('box');
 // box.addEventListener('mouseover', runEvent);
 // box.addEventListener('mouseout', runEvent);
 
-box.addEventListener('mousemove', runEvent);
+// box.addEventListener('mousemove', runEvent);
 
+// var itemInput = document.querySelector('input[type="text"]');
+// var form = document.querySelector('form');
+// var select = document.querySelector('select');
 
-function runEvent(e){
-    console.log('EVENT TYPE: '+e.type);
+// itemInput.addEventListener('keydown', runEvent);
+// itemInput.addEventListener('keyup', runEvent);
+// itemInput.addEventListener('keypress', runEvent);
+
+// itemInput.addEventListener('focus', runEvent);
+// itemInput.addEventListener('blur', runEvent);
+
+// itemInput.addEventListener('cut', runEvent);
+// itemInput.addEventListener('paste', runEvent);
+
+// itemInput.addEventListener('input', runEvent);
+
+// select.addEventListener('change', runEvent);
+// select.addEventListener('input', runEvent);
+
+// form.addEventListener('submit', runEvent);
+
+// function runEvent(e){
+//     e.preventDefault();
+//     console.log('EVENT TYPE: '+e.type);
     
-    output.innerHTML = '<h3>MouseX: '+e.offsetX+' </h3><h3>MouseY: '+e.offsetY+'</h3>';
-}
+    // console.log(e.target.value);
+    // document.getElementById('output').innerHTML = '<h3>'+e.target.value+'</h3>';
+    //output.innerHTML = '<h3>MouseX: '+e.offsetX+' </h3><h3>MouseY: '+e.offsetY+'</h3>';
+    
+    // box.style.backgroundColor = "rgb("+e.offsetX+", "+e.offsetY+", 40)";
+// }
 
 
 
