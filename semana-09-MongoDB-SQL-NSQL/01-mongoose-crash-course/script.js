@@ -1,7 +1,7 @@
 const mongoose = require ('mongoose');
 const User = require ('./User');
 
-mongoose.connect('mongodb+srv://kolodani:GMpathfinder143@cluster0.bqrlkq6.mongodb.net/test');
+mongoose.connect('mongodb+srv://kolodani:<PASSWORD>@cluster0.bqrlkq6.mongodb.net/test');
 
 run()
 async function run() {
