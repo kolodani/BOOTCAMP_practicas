@@ -19,8 +19,9 @@ function App() {
 
   return (
     <div className="App">
-      <Nav toggle={toggle}/>
-      <Video nr={counter} setToggle={toggler}/>
+      <h1>Hello react</h1>
+      <button onClick={incrementer}>Increment</button>
+      <h2>{counter}</h2>
     </div>
   );
 }
