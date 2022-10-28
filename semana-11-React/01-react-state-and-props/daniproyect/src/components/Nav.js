@@ -1,9 +1,9 @@
 import React from "react";
 
-const Nav = () => {
+const Nav = (props) => {
     return (
         <nav>
-            <h1>Nav</h1>
+            {props.toggle ? <h1>Nav</h1> : ""}
         </nav>
     );
 };

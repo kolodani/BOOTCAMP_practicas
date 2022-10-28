@@ -1,6 +1,8 @@
 import React,{useState} from 'react';
 import './App.css';
 //Import Component
+import Nav from "./components/Nav";
+import Video from './components/Video';
 
 function App() {
   // Write JavaScript code here
@@ -17,10 +19,8 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className={toggle ? "active" : ""}>Hello React</h1>
-      <h2>Counter: {counter}</h2>
-      <button onClick={incrementer}>Click</button>
-      <button onClick={toggler}>Toggle</button>
+      <Nav toggle={toggle}/>
+      <Video nr={counter} setToggle={toggler}/>
     </div>
   );
 }
